@@ -1,0 +1,76 @@
+<!-- INíCIO do CONTEÚDO -->
+<section class="content-header">
+</section>
+
+<section class="content">
+    <section class="invoice">
+        <form [formGroup]="hospedeForm" novalidate>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="page-header">
+                        <i class="fa fa-sticky-note"></i> Cadastro de Hóspede
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="lead">Dados Pessoais</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <app-input-container>
+                        <input class="form-control" formControlName="name" placeholder="Nome" autocomplete="off">
+                    </app-input-container>
+                </div>
+
+                <div class="col-xs-12 col-sm-3">
+                    <app-input-container>
+                        <input class="form-control" formControlName="lastName" placeholder="Sobrenome"
+                               autocomplete="off">
+                    </app-input-container>
+                </div>
+
+                <div class="col-xs-12 col-sm-3">
+                    <app-input-container>
+                        <input class="form-control" formControlName="birthday" placeholder="Date de nascimento"
+                               autocomplete="off" id="datepicker">
+                    </app-input-container>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <input class="form-control" formControlName="document" placeholder="Documento">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="lead">Cobrança</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <input class="form-control" formControlName="credcard" placeholder="Número do cartão de crédito">
+                </div>
+
+
+                <div class="col-xs-12 col-sm-4">
+                    <input class="form-control" formControlName="telefone" placeholder="Telefone">
+                </div>
+
+
+                <div class="col-xs-12 col-sm-4">
+                    <input class="form-control" formControlName="checkin" placeholder="Valor check-in">
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="row">
+            <div class="col-xs-12">
+                <button (click)="salvaHospede(hospedeForm.value)" type="button" class="btn btn-success pull-right">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </section>
+</section>

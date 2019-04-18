@@ -1,0 +1,34 @@
+<!-- Início do header -->
+<header class="main-header">
+    <nav class="navbar navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a [routerLink]="['/']" class="navbar-brand"><b>Hotel</b></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse pull-left collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hóspedes
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" [routerLink]="['/cadastro-hospede']">Cadastro</a>
+                            <a class="dropdown-item" [routerLink]="['/consulta-hospede']">Listagem</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+        </div>
+    </nav>
+</header>
+<!-- Fim do header -->

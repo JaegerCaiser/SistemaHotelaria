@@ -1,0 +1,40 @@
+<section class="content-header">
+    <h1>
+        Todos Hóspedes
+    </h1>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data Nascimento</th>
+                    <th>Check-in</th>
+                    <th>Cartão de crédito</th>
+                    <th style="width: 50px">Remover</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr *ngFor="let hospede of hospedes" routerLink="../edit-hospede/{{hospede.id}}">
+                    <td>{{hospede.lastName + ', ' + hospede.name}}</td>
+                    <td>{{hospede.birthday}}</td>
+                    <td>{{hospede.checkin}}</td>
+                    <td>{{hospede.credcard}}</td>
+                    <td class="td-click" style="text-align: center" title="Remover" (click)="removerHospede(hospede)"><i class="fa fa-trash"></i></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row bottom">
+        <div class="col-2">
+            <button (click)="exportar()" class="btn btn-primary">Exportar</button>
+        </div>
+    </div>
+</section>
