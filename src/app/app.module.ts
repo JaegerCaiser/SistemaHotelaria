@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
-import {AboutComponent} from './about/about.component';
 import {RouterModule} from '@angular/router';
 import {ROUTES} from './app.routes';
 import {HomeComponent} from './home/home.component';
@@ -18,7 +17,6 @@ import {HospedeService} from './hospede/hospede.service';
     declarations: [
         AppComponent,
         HeaderComponent,
-        AboutComponent,
         HomeComponent,
         HospedeCadastroComponent,
         HospedeConsultaComponent
